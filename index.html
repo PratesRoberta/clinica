@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica de Exemplo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Quem somos nós</a></li>
+                    <li><a href="#appointment">Agendamentos</a></li>
+                </ul>
+            </nav>
+            <a href="#home" class="logo">Clínica Beauty </a>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <!-- Galeria de imagens -->
+    <section class="image-gallery">
+        <div class="container">
+            <a href="serviço1.html" class="image-link" target="_blank">
+                <img src="assets/agu2.jpg" alt="Serviço 1">
+                <span class="button">Estética</span>
+            </a>
+            <a href="#servico2" class="image-link" target="_blank">
+                <img src="assets/sobr1.jpg" alt="Serviço 2">
+                <span class="button">Design de Sobrancelha</span>
+            </a>
+            <a href="#servico3" class="image-link" target="_blank">
+                <img src="assets/m3.avif" alt="Serviço 3">
+                <span class="button">Cabelos</span>
+            </a>
+            
+        </div>
+        <a href="#appointment" class="hero-btn">Agende Agora</a>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section class="contact-section">
+       
+        <div class="contact-container">
+            <!-- Informações de Contato e Imagem -->
+            <div class="contact-info">
+                <img src="assets/biomedica.jpeg" alt="Contato - Clínica">
+                
+            </div>
+
+            <!-- Formulário de Contato -->
+            
+            <div class="contact-form">
+                <h1>Entre em Contato</h1>
+                <form action="#" method="post">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Clínica Beauty</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

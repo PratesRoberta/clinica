@@ -1,0 +1,253 @@
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: rgba(255, 247, 247, 0.58);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.0rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 650;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #585454; /* Cor do botão */
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav-list a {
+        color: #333;
+        font-size: 1.2rem;
+    }
+}
+
+/* Galeria de Imagens */
+.image-gallery {
+    position: relative;
+    margin-top: 70px;
+    padding: 2rem 0;
+    text-align: center;
+    background: url('https://img.freepik.com/vetores-gratis/fundo-floral-desenhado-a-mao_23-2149032849.jpg?t=st=1736631877~exp=1736635477~hmac=0e86e36c17af9e91a2021670ca15af220fced7c607149cbdf683e546e0204a9b&w=900') no-repeat center center/cover;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.image-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #4a4a4a;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.image-link img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-link:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(75, 15, 15, 0.2);
+}
+
+.image-link span {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #efebeb;
+    transition: color 0.3s;
+    position: absolute;
+    bottom: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+.hero-btn {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    background-color: #070707; /* Cor do botão */
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.0rem;
+    font-weight: bold; /* Adicionando o negrito aqui */
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #525050; /* Cor do botão quando em hover */
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .image-link img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Contato */
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    
+}
+
+.contact-container {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 70px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 0.1 px;
+}
+
+.contact-info img {
+    width: 75%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-info h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.contact-form label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0c0c0c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #4f4f50;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0
+}
