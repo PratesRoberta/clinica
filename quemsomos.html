@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estética - Clínica Beauty</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            margin-top: 70px;
+            background: url('https://img.freepik.com/vetores-gratis/fundo-floral-desenhado-a-mao_23-2149032849.jpg') no-repeat center center/cover;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(255, 247, 247, 0.58);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 650;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(145, 35, 35, 0);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .photo-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .photo-item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 900px;
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo-item img {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .photo-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .photo-item img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="quemsomos.html">Quem somos nós</a></li>
+                    <li><a href="agendamento.html">Agendamentos</a></li>
+                </ul>
+            </nav>
+            <a href="index.html" class="logo">Clínica Beauty</a>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="intro">
+            <h2>Quem somos</h2>
+        </div>
+
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <img src="assets/negocios.jpg" alt="Quem somos">
+                <div>
+                    <p>
+                        Bem-vindo à Clínica Beauty, um espaço criado para realçar sua beleza e promover bem-estar!
+                        Somos especialistas em procedimentos estéticos avançados, cuidados com os cabelos e técnicas
+                        inovadoras para sobrancelhas, sempre com foco em proporcionar resultados naturais e
+                        personalizados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="whatsapp-popup">
+        <a href="https://wa.me/SEUNUMERO?text=Olá,%20gostaria%20de%20mais%20informações!" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
+        </a>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Clínica Beauty</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
