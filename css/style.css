@@ -5,29 +5,6 @@ body {
     padding: 0;
 }
 
-/* Cabeçalho */
-.header {
-    background-color: rgba(255, 247, 247, 0.58);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0.0rem 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 650;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(5px);
-}
-
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -221,12 +198,13 @@ body {
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
+    width: 100%; /* Garante que os campos não excedam a largura do container */
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
 }
 
 .contact-form button {
@@ -243,21 +221,6 @@ body {
 
 .contact-form button:hover {
     background-color: #4f4f50;
-}
-
-/* Rodapé */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 2rem 0
-}
-.form-container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .appointment-form .form-group {
@@ -325,4 +288,3 @@ body {
     height: 40px;
     border-radius: 50%;
 }
-
