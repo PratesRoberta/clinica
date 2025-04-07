@@ -113,7 +113,6 @@
             box-sizing: border-box;
             font-size: 1rem;
         }
-
     </style>
 </head>
 
@@ -182,7 +181,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="submit-button">Agendar</button>
+                    <button type="submit" class="submit-button" onclick="mostrarAlerta()">Agendar</button>
                 </div>
             </form>
         </div>
@@ -199,6 +198,9 @@
     </footer>
 
     <script>
+        function mostrarAlerta() {
+            alert('Agradecemos o seu agendamento! Entraremos em contato em breve.');
+        }
         function toggleMenu() {
             const nav = document.querySelector('.nav');
             nav.classList.toggle('active');
